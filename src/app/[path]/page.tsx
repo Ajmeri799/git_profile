@@ -2,6 +2,8 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import Image from "next/image";
+
 interface Repo {
   id: number;
   name: string;
@@ -47,7 +49,7 @@ export default function Profile() {
     if (path) {
       githubAPI();
     }
-  }, [path]);
+  }, [path, router]);
   return (
     <>
       <h1 className=" text-7xl font-bold  text-center pt-10">Github Profile</h1>
@@ -56,7 +58,7 @@ export default function Profile() {
         <div className=" md:w-64 h-full">
           <div className="flex justify-center">
             {data && (
-              <img
+              <Image
                 src={data.avatar_url}
                 alt="Profile"
                 className="h-60 w-60 rounded-full m-5 items-center"
