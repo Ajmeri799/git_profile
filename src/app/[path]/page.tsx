@@ -56,10 +56,11 @@ export default function Profile() {
         <div className=" md:w-64 h-full">
           <div className="flex justify-center">
             {data && (
-              <>
-                <h1 className="text-3xl font-bold py-2">{data.name}</h1>
-                <h2 className="sm:px-20 md:px-0">{data.bio}</h2>
-              </>
+              <img
+                src={data.avatar_url}
+                alt="Profile"
+                className="h-60 w-60 rounded-full m-5 items-center"
+              />
             )}
           </div>
           {data && (
