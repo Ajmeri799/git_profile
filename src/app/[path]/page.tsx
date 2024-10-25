@@ -2,7 +2,7 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
-import Image from "next/image";
+// import Image from "next/image";
 
 interface Repo {
   id: number;
@@ -58,7 +58,7 @@ export default function Profile() {
         <div className=" md:w-64 h-full">
           <div className="flex justify-center">
             {data && (
-              <Image
+              <img
                 src={data.avatar_url}
                 alt="Profile"
                 className="h-60 w-60 rounded-full m-5 items-center"
